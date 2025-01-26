@@ -1,7 +1,7 @@
 import { readFile } from 'node:fs/promises';
 import { downloadNPMPackage, IconSet, exportToDirectory } from '@iconify/tools';
 
-function getIconSet(prefix) {// Directories
+async function getIconSet() {// Directories
     const cacheDir = 'cache';
     const outDir = 'svg';
 
@@ -36,11 +36,11 @@ function getIconSet(prefix) {// Directories
         const iconSet = new IconSet(data);
 
         // Export it
-        console.log('Exporting', iconSet.info.name);
+        console.log('Exporting', iconSet.info?.name);
         await exportToDirectory(iconSet, {
             target: outDir + '/' + prefix,
         });
     }
 }
 
-console.log('Done');
+export default getIconSet;

@@ -1,1 +1,3 @@
-import { }
+import getIconSet from "./iconify";
+
+getIconSet();

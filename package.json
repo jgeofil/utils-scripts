@@ -2,8 +2,10 @@
   "name": "utils-scripts",
   "module": "index.ts",
   "type": "module",
+  "packageManager": "bun",
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/node": "^22.10.10"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -11,10 +13,12 @@
   "dependencies": {
     "@iconify/collections": "1.0.510",
     "@iconify/json": "*",
-    "@iconify/tools": "4.1.1"
+    "@iconify/tools": "4.1.1",
+    "node": "^18.20.6"
   },
   "scripts": {
-    "build": "bun run build"
+    "build": "bun run build",
+    "export": "bun run src/index.ts"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts"
